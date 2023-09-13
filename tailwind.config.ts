@@ -15,13 +15,16 @@ const config: Config = {
       },
     },
     screens: {
-      mobile: "375px",
-      // => @media (min-width: 640px) { ... }
-      tablet: "640px",
-      // => @media (min-width: 640px) { ... }
+      mobile: "23.4375rem",
+      // => @media (min-width: 40rem) { ... }
+      tablet: "40rem",
+      // => @media (min-width: 40rem) { ... }
 
-      laptop: "1024px",
-      // => @media (min-width: 1024px) { ... }
+      laptop: "64rem",
+      // => @media (min-width: 64rem) { ... }
+    },
+    backgroundColor: {
+      headerColor: "#032541;",
     },
   },
   plugins: [],
