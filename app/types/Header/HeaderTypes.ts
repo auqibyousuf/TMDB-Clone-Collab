@@ -3,5 +3,5 @@ import { MenuItemType } from "../Menu/MenuTypes";
 
 export type HeaderType = {
   logo: LogoType;
-  // navLinks: MenuItemType;
+  children: [];
 };
