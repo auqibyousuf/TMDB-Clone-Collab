@@ -2,6 +2,7 @@ import Logo from "../Logo/Logo";
 import { HeaderType } from "@/app/types/Header/HeaderTypes";
 import Link from "next/link";
 import Button from "../Button/Button";
+import Search from "../Search/Search";
 
 const Header = ({ logo }: HeaderType) => {
   const menuItems = [
@@ -66,7 +67,7 @@ const Header = ({ logo }: HeaderType) => {
   ];
   return (
     <header className="bg-primaryColor h-28 py-3">
-      <div className="w-[1220px] px-10 h-full flex items-center mx-auto">
+      <div className="w-[1440px] px-10 h-full flex items-center mx-auto">
         <Logo imgAlt={logo.imgAlt} imgUrl={logo.imgUrl} />
         {/* <Menu navLinks={navLinks} /> */}
         <nav className="flex w-full justify-between items-center text-base">
@@ -116,7 +117,7 @@ const Header = ({ logo }: HeaderType) => {
                 </li>
               );
             })}
-            <Button btnUrl="/" variant="search" />
+            <Search searchVariant="icon" />
           </ul>
         </nav>
       </div>
