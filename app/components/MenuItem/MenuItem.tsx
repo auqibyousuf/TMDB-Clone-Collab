@@ -2,18 +2,18 @@
 import { MenuItemType } from "@/app/types/Menu/MenuTypes";
 import Link from "next/link";
 
-const Menu = (navLinks: MenuItemType[]) => {
+const MenuItem = ({ navLinks }: MenuItemType) => {
   return (
     <ul>
-      {navLinks.map((link) => {
+      {navLinks.map((links) => {
         return (
-          <li key={link.text}>
+          <li key={links.text}>
             <Link
               className="p-2
             pr-5 text-white"
-              href={link.link}
+              href={links.link}
             >
-              {link.text}
+              {links.text}
             </Link>
           </li>
         );
@@ -22,4 +22,4 @@ const Menu = (navLinks: MenuItemType[]) => {
   );
 };
 
-export default Menu;
+export default MenuItem;

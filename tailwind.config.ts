@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      backgroundColor: {
+        primaryColor: "#032541",
+      },
+      colors: {
+        btnTextColor: "#01B4E4",
+      },
     },
     screens: {
       mobile: "23.4375rem",
@@ -22,9 +28,6 @@ const config: Config = {
 
       laptop: "64rem",
       // => @media (min-width: 64rem) { ... }
-    },
-    backgroundColor: {
-      headerColor: "#032541;",
     },
   },
   plugins: [],

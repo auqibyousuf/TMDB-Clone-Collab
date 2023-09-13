@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -19,69 +20,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const menuItems = [
-    {
-      text: "Movies",
-      link: "nolink",
-      children: [
-        {
-          text: "Popular",
-          link: "/movie",
-          children: null,
-        },
-        {
-          text: "Now Playing",
-          link: "/movie/now-playing",
-          children: null,
-        },
-        {
-          text: "Up Coming",
-          link: "/movie/upcoming",
-          children: null,
-        },
-        {
-          text: "Top Rated",
-          link: "/movie/top-rated",
-          children: null,
-        },
-      ],
-    },
-    {
-      text: "Tv Shows",
-      link: "nolink",
-      children: [
-        {
-          text: "Popular",
-          link: "/tv",
-          children: null,
-        },
-        {
-          text: "Airing Today",
-          link: "/tv/airing-today",
-          children: null,
-        },
-        {
-          text: "On TV",
-          link: "/tv/on-the-air",
-          children: null,
-        },
-        {
-          text: "Top Rated",
-          link: "/tv/top-rated",
-          children: null,
-        },
-      ],
-    },
-    {
-      text: "People",
-      link: "/person",
-      children: null,
-    },
-  ];
   return (
     <html lang="en" className={sourceCodePro.className}>
       <Header logo={{ imgUrl: "/images/logo.svg", imgAlt: "" }} />
       <body>{children}</body>
+      <Footer logoSrc="/images/footer-logo.svg" />
     </html>
   );
 }
