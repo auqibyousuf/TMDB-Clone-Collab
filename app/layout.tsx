@@ -22,9 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={sourceCodePro.className}>
-      <Header logo={{ imgUrl: "/images/logo.svg", imgAlt: "" }} />
-      <body>{children}</body>
-      <Footer logoSrc="/images/footer-logo.svg" />
+      <body>
+        <Header logo={{ imgUrl: "/images/logo.svg", imgAlt: "" }} />
+        <section className="w-[1440px] mx-auto">{children}</section>
+        <Footer logoSrc="/images/footer-logo.svg" />
+      </body>
     </html>
   );
 }
