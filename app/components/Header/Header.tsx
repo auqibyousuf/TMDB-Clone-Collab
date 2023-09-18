@@ -8,7 +8,7 @@ const Header = ({ logo }: HeaderType) => {
   const menuItems = [
     {
       text: "Movies",
-      link: "nolink",
+      link: "#",
       subMenu: [
         {
           text: "Popular",

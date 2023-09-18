@@ -104,7 +104,7 @@ const Footer = ({ logoSrc }: FooterType) => {
     },
   ];
   return (
-    <footer className="bg-primaryColor text-white fixed w-full bottom-0 ">
+    <footer className="bg-primaryColor text-white  w-full bottom-0 ">
       <div className="flex justify-between h-96 items-center max-w-[1440px] m-auto px-10 ">
         <div className="mr-10 flex flex-col items-end -mt-12">
           <Image
@@ -117,7 +117,7 @@ const Footer = ({ logoSrc }: FooterType) => {
           <Button btnText="Join the Community" btnUrl="" variant="join" />
         </div>
 
-        <nav className="" id="footer-menu">
+        <nav className="" id="footer-menu" role="navigation">
           <ul className="flex">
             {footerMenu.map((menu) => {
               return (
