@@ -6,7 +6,7 @@ import { SearchTypes } from "@/app/types/Search/SearchTypes";
 
 const Search = ({ searchBar, searchVariant, searchPlaceholder }: any) => {
   const searchClasses = classNames({
-    "text-white w-5 h-5 ": searchVariant == "icon",
+    "text-white w-5 h-5 pointer ": searchVariant == "icon",
     "flex text-lg items-center mt-12 relative": searchVariant == "searchBar",
   });
   const searchBarClasses = classNames({

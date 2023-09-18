@@ -1,9 +1,13 @@
 import { ButtonType } from "@/app/types/Button/ButtonTypes";
 import classNames from "classnames";
 import Link from "next/link";
-import { FaSearch } from "react-icons/fa";
 
 const Button = ({ btnText, btnUrl, clickHandler, variant }: ButtonType) => {
+  const switchButton = ({ values }: any) => {
+    <Link href={btnUrl} onClick={clickHandler} className={buttonClasses}>
+      {values}
+    </Link>;
+  };
   const buttonClasses = classNames({
     "block uppercase text-btnTextColor px-5 py-2 bg-white rounded":
       variant == "join",
@@ -11,9 +15,15 @@ const Button = ({ btnText, btnUrl, clickHandler, variant }: ButtonType) => {
       variant == "search",
   });
   return (
-    <Link href={btnUrl} onClick={clickHandler} className={buttonClasses}>
-      {btnText}
-    </Link>
+    <>
+      {variant == "join" ? (
+        <Link href={btnUrl} onClick={clickHandler} className={buttonClasses}>
+          {btnText}
+        </Link>
+      ) : (
+        switchButton
+      )}
+    </>
   );
 };
 
