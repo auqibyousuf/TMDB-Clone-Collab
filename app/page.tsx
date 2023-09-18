@@ -10,7 +10,7 @@ export default function Home() {
     headers: {
       accept: "application/json",
       Authorization:
-        " Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOTVjMDMzOGUzMDcxYTY3Mjg1MjU4M2I5YzY4ZDlkYSIsInN1YiI6IjY1MDA1YmU1NmEyMjI3MDExYTdhYTliZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ahfZbMIpPcMBfgz1xBsnX4chtpgVtFTyzLk84qr_J6M",
+        "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOTVjMDMzOGUzMDcxYTY3Mjg1MjU4M2I5YzY4ZDlkYSIsInN1YiI6IjY1MDA1YmU1NmEyMjI3MDExYTdhYTliZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ahfZbMIpPcMBfgz1xBsnX4chtpgVtFTyzLk84qr_J6M",
     },
   };
   useEffect(() => {
