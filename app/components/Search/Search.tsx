@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import InputField from "../InputField/InputField";
 import { SearchTypes } from "@/app/types/Search/SearchTypes";
 
-const Search = ({ searchBar, searchVariant, searchPlaceholder }: any) => {
+const Search = ({ btnText, btnUrl, searchVariant, searchPlaceholder }: any) => {
   const searchClasses = classNames({
     "text-white w-5 h-5 pointer ": searchVariant == "icon",
     "flex text-lg items-center mt-12 relative": searchVariant == "searchBar",
@@ -13,7 +13,7 @@ const Search = ({ searchBar, searchVariant, searchPlaceholder }: any) => {
     "px-5 py-3 w-full rounded-3xl relative h-12": searchVariant == "searchBar",
   });
   return (
-    <>
+    <div>
       {searchVariant == "searchBar" && (
         <div className={searchClasses}>
           <InputField
@@ -21,15 +21,11 @@ const Search = ({ searchBar, searchVariant, searchPlaceholder }: any) => {
             type="text"
             extraClasses={searchBarClasses}
           />
-          <Button
-            btnUrl={searchBar.btnUrl}
-            btnText={searchBar.btnText}
-            variant="search"
-          />
+          <Button btnUrl="#" btnText={btnText} variant="search" />
         </div>
       )}
       {searchVariant == "icon" && <FaSearch className={searchClasses} />}
-    </>
+    </div>
   );
 };
 
