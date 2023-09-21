@@ -1,4 +1,3 @@
-import { SearchSectionTypes } from "@/app/types/SearchSection/SearchSectionType";
 import Search from "../Search/Search";
 
 const SearchSection = ({
@@ -14,7 +13,7 @@ const SearchSection = ({
       <Search
         searchPlaceholder={splaceholder}
         searchVariant="searchBar"
-        searchBar={{ btnText: "search", btnUrl: "/" }}
+        btnText={searchBtnText}
       />
     </div>
   );

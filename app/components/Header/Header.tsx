@@ -82,7 +82,7 @@ const Header = ({ logo }: HeaderType) => {
                   <Link className=" text-white" href={link.link}>
                     {link.text}
                   </Link>
-                  {link.subMenu?.length > 0 ? (
+                  {link.subMenu?.length ? (
                     <ul className="hidden text-black text-base group-hover:block absolute rounded top-10 bg-white w-40 -left-2">
                       {link.subMenu?.map((subMenuItem) => {
                         return (
