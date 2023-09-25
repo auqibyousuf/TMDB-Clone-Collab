@@ -1,32 +1,13 @@
+/* eslint-disable @next/next/no-async-client-component */
+"use client";
 import MovieCard from "../MovieCard/MovieCard";
-import Button from "../Button/Button";
-import Link from "next/link";
+import { MovieListType } from "@/app/types/MovieList/MovieListType";
 
-const MovieList = ({ movieList }: any) => {
-  const filters = [
-    {
-      name: "Today",
-      value: "today",
-    },
-    {
-      name: "This week",
-      value: "week",
-    },
-  ];
-
-  console.log(movieList);
+function MovieList({ movies }: MovieListType) {
   return (
     <div>
-      <div className="flex pt-8">
-        {filters.map(({ name }) => {
-          return (
-            <Button variant="switch" btnText={name} btnUrl="#" key={name} />
-          );
-        })}
-      </div>
-
-      <div className="grid grid-cols-6 gap-5 pt-5 pb-10">
-        {movieList.map((movie: any) => {
+      <ul className="grid laptop:grid-cols-6 gap-5 pt-5 pb-10 tablet:grid-cols-4 mobile:grid-cols-1">
+        {movies?.map((movie: any) => {
           const {
             backdrop_path,
             title,
@@ -38,22 +19,24 @@ const MovieList = ({ movieList }: any) => {
             id,
           } = movie;
           return (
-            <a key={id} href={`/movie/${id}`}>
-              <MovieCard
-                title={title}
-                backdrop_path={backdrop_path}
-                vote={vote_average}
-                release_date={release_date}
-                poster_path={poster_path}
-                first_air_date={first_air_date}
-                name={name}
-              />
-            </a>
+            <li key={id}>
+              <a href={`/movie/${id}`}>
+                <MovieCard
+                  title={title}
+                  backdrop_path={backdrop_path}
+                  vote={vote_average}
+                  release_date={release_date}
+                  poster_path={poster_path}
+                  name={name}
+                  first_air_date={first_air_date}
+                />
+              </a>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
-};
+}
 
 export default MovieList;

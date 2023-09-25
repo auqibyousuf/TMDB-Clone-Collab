@@ -1,15 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { MovieCardType } from "@/app/types/MovieCard/MovieCardTypes";
+import React from "react";
 
-const MovieCard = ({
-  backdrop_path,
-  title,
-  first_air_date,
-  vote,
-  release_date,
-  poster_path,
-  name,
-}: MovieCardType) => {
+const TrailerCard = ({ title, poster_path, name }: any) => {
   const img_200 = "https://image.tmdb.org/t/p/w200";
   const unavailable = "https://www.movienewz.com/img/films/poster-holder.jpg";
   return (
@@ -23,10 +15,9 @@ const MovieCard = ({
       />
       <div>
         <p className=" font-bold">{title ? title : name}</p>
-        <span>{release_date ? release_date : first_air_date}</span>
       </div>
     </div>
   );
 };
 
-export default MovieCard;
+export default TrailerCard;

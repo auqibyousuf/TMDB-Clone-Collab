@@ -1,11 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-const sourceCodePro = Source_Code_Pro({
+const SourceSans3 = Source_Sans_3({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
@@ -21,10 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={sourceCodePro.className}>
+    <html lang="en" className={SourceSans3.className}>
       <body>
         <Header logo={{ imgUrl: "/images/logo.svg", imgAlt: "" }} />
-        <section className="w-[1440px] mx-auto">{children}</section>
+        <section className="">{children}</section>
         <Footer logoSrc="/images/footer-logo.svg" />
       </body>
     </html>

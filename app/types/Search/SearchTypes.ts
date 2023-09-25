@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { ButtonType } from "../Button/ButtonTypes";
+import { ButtonType } from "../LinkButton/LinkButtonTypes";
 import { InputFieldTypes } from "../InputField/InputFieldTypes";
 
 export type SearchTypes = {

@@ -1,7 +1,7 @@
 import { FooterType } from "@/app/types/Footer/FooterTypes";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button/Button";
+import Button from "../LinkButton/LinkButton";
 import classNames from "classnames";
 
 const Footer = ({ logoSrc }: FooterType) => {
