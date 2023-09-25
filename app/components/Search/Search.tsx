@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { FaSearch } from "react-icons/fa";
-import Button from "../Button/Button";
+import Button from "../LinkButton/LinkButton";
 import InputField from "../InputField/InputField";
 import { SearchTypes } from "@/app/types/Search/SearchTypes";
 

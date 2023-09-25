@@ -1,7 +1,7 @@
 import Logo from "../Logo/Logo";
 import { HeaderType } from "@/app/types/Header/HeaderTypes";
 import Link from "next/link";
-import Button from "../Button/Button";
+import Button from "../LinkButton/LinkButton";
 import Search from "../Search/Search";
 
 const Header = ({ logo }: HeaderType) => {
@@ -66,7 +66,7 @@ const Header = ({ logo }: HeaderType) => {
     },
   ];
   return (
-    <header className="bg-primaryColor h-28 py-3">
+    <header className="bg-primaryColor h-28 py-3 tablet:w-max desktop:w-full w-max">
       <div className="w-[1440px] px-10 h-full flex items-center mx-auto">
         <Logo imgAlt={logo.imgAlt} imgUrl={logo.imgUrl} />
         {/* <Menu navLinks={navLinks} /> */}
