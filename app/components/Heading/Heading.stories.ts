@@ -16,7 +16,6 @@ type Story = StoryObj<typeof meta>;
 export const Heading20: Story = {
   args: {
     text: "Headings",
-    variant: "20",
-    headingElement: "2",
+    variant: "22",
   },
 };

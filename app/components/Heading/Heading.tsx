@@ -2,13 +2,24 @@ import React from "react";
 import { HeadingTypes } from "./HeadingTypes";
 import classnames from "classnames";
 
-const Heading = ({
-  text,
-  variant,
-  headingElement,
-  extraClasses,
-}: HeadingTypes) => {
-  const DynamicHeading = `h${headingElement}` as keyof JSX.IntrinsicElements;
+const Heading = ({ text, variant, extraClasses }: HeadingTypes) => {
+  let DynamicHeading = "h1" as keyof JSX.IntrinsicElements;
+  switch (variant) {
+    case "20":
+      DynamicHeading = "h6";
+      break;
+    case "22":
+      DynamicHeading = "h5";
+      break;
+    case "24":
+      DynamicHeading = "h4";
+    case "32":
+      DynamicHeading = "h3";
+    case "36":
+      DynamicHeading = "h2";
+    case "48":
+      DynamicHeading = "h1";
+  }
 
   const headingClasses = classnames({
     "text-[20px] leading-[24px]": variant == "20",
