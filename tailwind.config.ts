@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./stories/**/*.{js,ts,jsx,tsx}",
+    "./app/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -14,6 +15,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        darkBlue: "#032541",
+        darkGrey: "#757575 ",
+        purple: "#805BE7",
+        lightBlue: "#01B4E4",
+        lightBrown: "#897474",
+        grey: "#D7D7D7",
+        lightGrey: "E4E4E4",
+      },
+    },
+    borderRadius: {
+      5: " 5px",
+      8: "8px",
+      16: "16px",
+      30: "30px",
+      full: "100%",
     },
   },
   plugins: [],
