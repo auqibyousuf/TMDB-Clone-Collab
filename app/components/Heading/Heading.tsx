@@ -13,12 +13,16 @@ const Heading = ({ text, variant, extraClasses }: HeadingTypes) => {
       break;
     case "24":
       DynamicHeading = "h4";
+      break;
     case "32":
       DynamicHeading = "h3";
+      break;
     case "36":
       DynamicHeading = "h2";
+      break;
     case "48":
       DynamicHeading = "h1";
+      break;
   }
 
   const headingClasses = classnames({
