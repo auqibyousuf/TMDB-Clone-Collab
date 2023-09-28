@@ -11,7 +11,7 @@ const Text = ({ text, extraClasses, variant }: TextTypes) => {
     "text-[22px] leading-[26px]": variant == "22",
     "text-[24px] leading-[28px]": variant == "24",
   });
-  return <p className={`${textClasses} ${extraClasses}`}>{text}</p>;
+  return <p className={`${textClasses} ${extraClasses ?? ""}`}>{text}</p>;
 };
 
 export default Text;

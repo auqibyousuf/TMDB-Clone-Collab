@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Heading from "./Heading";
+import Link from "./Link";
 
 const meta = {
-  title: "Components/Heading",
-  component: Heading,
+  title: "Components/Link",
+  component: Link,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof Heading>;
+} satisfies Meta<typeof Link>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Heading20: Story = {
+export const NavLink: Story = {
   args: {
-    text: "Headings",
-    variant: "22",
+    text: "Link Component",
+    url: "#",
   },
 };
