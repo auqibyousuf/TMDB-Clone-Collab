@@ -14,11 +14,11 @@ const NavBar = ({
     <ul
       className={`${listContainerClasses} ${listContainerExtraClasses ?? ""}`}
     >
-      {menuLinks.map((linkItem) => {
+      {menuLinks.map((linkItem, index) => {
         const { text, url } = linkItem;
         return (
           <li
-            key={text}
+            key={index}
             className={`${listItemClasses} ${listItemExtraClasses ?? ""}`}
           >
             <LinkComponent url={url} text={text} />
