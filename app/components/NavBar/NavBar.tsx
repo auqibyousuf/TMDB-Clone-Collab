@@ -3,15 +3,24 @@ import { NavBarType } from "./NavBarTypes";
 import LinkComponent from "../Link/Link";
 import classNames from "classnames";
 
-const NavBar = ({ menuLinks, extraClasses }: NavBarType) => {
-  const listContainerClasses = classNames("flex relative");
-  const listItemClasses = classNames("group p-2 pr-5 relative");
+const NavBar = ({
+  menuLinks,
+  listItemExtraClasses,
+  listContainerExtraClasses,
+}: NavBarType) => {
+  const listContainerClasses = classNames("flex relative gap-4");
+  const listItemClasses = classNames("group flex relative");
   return (
-    <ul className={listContainerClasses}>
+    <ul
+      className={`${listContainerClasses} ${listContainerExtraClasses ?? ""}`}
+    >
       {menuLinks.map((linkItem) => {
         const { text, url } = linkItem;
         return (
-          <li key={text} className={listItemClasses}>
+          <li
+            key={text}
+            className={`${listItemClasses} ${listItemExtraClasses ?? ""}`}
+          >
             <LinkComponent url={url} text={text} />
           </li>
         );

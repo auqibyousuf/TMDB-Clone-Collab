@@ -1,6 +1,7 @@
 import { LinkType } from "../Link/LinkTypes";
 
 export type NavBarType = {
-  menuLinks: LinkType[];
-  extraClasses?: string;
+  menuLinks: Array<LinkType>;
+  listItemExtraClasses?: string;
+  listContainerExtraClasses?: string;
 };
