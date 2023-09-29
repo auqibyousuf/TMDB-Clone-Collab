@@ -34,7 +34,7 @@ const Heading = ({ text, variant, extraClasses }: HeadingTypes) => {
     "text-[48px] leading-[48px]": variant == "48",
   });
   return (
-    <DynamicHeading className={`${headingClasses} ${extraClasses}`}>
+    <DynamicHeading className={`${headingClasses} ${extraClasses ?? ""}`}>
       {text}
     </DynamicHeading>
   );
