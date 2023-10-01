@@ -21,11 +21,14 @@ const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
           altText={logo.altText}
           extraClasses="mr-4"
           url={logo.url}
+          variant="header-logo"
         />
         <NavBar
           menuLinks={menu.menuLinks}
           listContainerExtraClasses={menu.listContainerExtraClasses}
           listItemExtraClasses={menu.listItemExtraClasses}
+          navBarVariant="header-nav"
+          navLinkExtraClasses="font-semibold"
         />
         <ActionIcon className={iconClasses} />
       </nav>

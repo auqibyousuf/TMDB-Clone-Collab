@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const NavBarMenu: Story = {
   args: {
+    navBarVariant: "header-nav",
     menuLinks: [
       {
         text: "Movies",
