@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Footer from "./Footer";
-import { ImSearch } from "react-icons/im";
 const meta = {
-  title: "Components/Header",
+  title: "Components/Footer",
   component: Footer,
   tags: ["autodocs"],
   parameters: {
@@ -13,7 +12,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const HeaderMenu: Story = {
+export const FooterMenu: Story = {
   args: {
     logo: {
       imgSrc: "https://placehold.co/150x50",
