@@ -1,34 +1,34 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import NavBar from "./NavBar";
+import type { Meta, StoryObj } from '@storybook/react'
+import NavBar from './NavBar'
 
 const meta = {
-  title: "Components/NavBar",
+  title: 'Components/NavBar',
   component: NavBar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-} satisfies Meta<typeof NavBar>;
+} satisfies Meta<typeof NavBar>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const NavBarMenu: Story = {
   args: {
-    navBarVariant: "header-nav",
+    variant: 'header',
     menuLinks: [
       {
-        text: "Movies",
-        url: "#",
+        text: 'Movies',
+        url: '#',
       },
       {
-        text: "Tv Shows",
-        url: "#",
+        text: 'Tv Shows',
+        url: '#',
       },
       {
-        text: "People",
-        url: "/person",
+        text: 'People',
+        url: '/person',
       },
     ],
   },
-};
+}
