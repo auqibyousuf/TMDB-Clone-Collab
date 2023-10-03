@@ -11,7 +11,7 @@ const Footer = ({ logo, menus }: FooterType) => {
   )
   return (
     <footer className={footerClasses}>
-      <Logo imgSrc={imgSrc} url={url} altText={altText} variant='footer-logo' />
+      <Logo imgSrc={imgSrc} url={url} altText={altText} variant='footer' />
       {menus.map((menu, index) => {
         return (
           <NavBar
