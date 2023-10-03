@@ -1,10 +1,9 @@
-import { IconType } from "react-icons";
+import { HeadingTypes } from "../Heading/HeadingTypes";
 import { LogoType } from "../Logo/LogoTypes";
 import { NavBarType } from "../NavBar/NavBarType";
 
-export type HeaderType = {
+export type FooterType = {
   logo: LogoType;
-  menu: NavBarType;
-  ActionIcon: IconType;
+  menus: Array<NavBarType>;
   extraClasses?: string;
 };
