@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import { LogoType } from "./LogoTypes";
-import Link from "next/link";
-import classNames from "classnames";
+import Image from 'next/image'
+import React from 'react'
+import { LogoType } from './LogoTypes'
+import Link from 'next/link'
+import classNames from 'classnames'
 
 export const Logo = ({
   imgSrc,
@@ -12,12 +12,12 @@ export const Logo = ({
   variant,
 }: LogoType) => {
   const imageClasses = classNames({
-    "w-[150px] h-[50px]": variant == "header-logo",
-    "w-[130px] h-[94px]": variant == "footer-logo",
-  });
+    'w-[150px] h-[50px]': variant == 'header',
+    'w-[130px] h-[94px]': variant == 'footer',
+  })
   return (
-    <Link href={url} className={extraClasses ?? ""}>
-      {variant == "header-logo" ? (
+    <Link href={url} className={extraClasses ?? ''}>
+      {variant == 'header' ? (
         <Image
           src={imgSrc}
           alt={altText}
@@ -35,5 +35,5 @@ export const Logo = ({
         />
       )}
     </Link>
-  );
-};
+  )
+}
