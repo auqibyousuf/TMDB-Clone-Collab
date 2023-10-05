@@ -1,9 +1,9 @@
-import { HeadingTypes } from "../Heading/HeadingTypes";
-import { LogoType } from "../Logo/LogoTypes";
-import { NavBarType } from "../NavBar/NavBarType";
+import { HeadingTypes } from '../Heading/HeadingTypes'
+import { LogoType } from '../Logo/LogoTypes'
+import { NavListType } from '../NavList/NavListType'
 
 export type FooterType = {
-  logo: LogoType;
-  menus: Array<NavBarType>;
-  extraClasses?: string;
-};
+  logo: LogoType
+  menus: Array<NavListType>
+  extraClasses?: string
+}

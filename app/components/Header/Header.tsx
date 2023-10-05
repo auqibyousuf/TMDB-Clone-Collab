@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeaderType } from './HeaderTypes'
 import classNames from 'classnames'
-import NavBar from '../NavBar/NavBar'
+import NavList from '../NavList/NavList'
 import { Logo } from '../Logo/Logo'
 
 const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
@@ -23,12 +23,12 @@ const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
           url={logo.url}
           variant='header'
         />
-        <NavBar
+        <NavList
           menuLinks={menu.menuLinks}
           listContainerExtraClasses={menu.listContainerExtraClasses}
           listItemExtraClasses={menu.listItemExtraClasses}
           variant='header'
-          extraClasses='font-semibold'
+          extraClasses='font-semibold text-white'
         />
         <ActionIcon className={iconClasses} />
       </nav>
