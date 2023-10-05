@@ -10,7 +10,7 @@ const Input = ({
   variant = 'text',
 }: InputType) => {
   const inputClasses = classNames(
-    'px-10 border-0 focus:outline-0 rounded-30 h-[44px] px-5 py-3 w-full relative h-12 placeholder:text-darkGrey text-[17px] font-normal'
+    'px-5 border-0 focus:outline-0 rounded-30 h-[44px] py-3 placeholder:text-darkGrey text-[17px] w-full'
   )
   return (
     <input
