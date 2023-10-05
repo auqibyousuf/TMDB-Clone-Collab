@@ -1,10 +1,10 @@
 import { LinkType } from '../Link/LinkTypes'
 
-export type NavBarType = {
+export type NavListType = {
   menuLinks: Array<LinkType>
   listItemExtraClasses?: string
   listContainerExtraClasses?: string
-  variant?: 'header' | 'footer'
+  variant?: 'header' | 'footer' | 'default'
   extraClasses?: string
   title?: string
 }
