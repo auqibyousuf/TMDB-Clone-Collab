@@ -22,7 +22,7 @@ const config: Config = {
         lightBlue: '#01B4E4',
         lightBrown: '#897474',
         grey: '#D7D7D7',
-        lightGrey: 'E4E4E4',
+        lightGrey: '#E4E4E4',
       },
     },
     borderRadius: {
