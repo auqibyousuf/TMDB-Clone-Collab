@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 const HeroSearchBar = ({ input, search, extraClasses }: HeroSearchBarType) => {
   const heroSearchBarClasses = classNames(
-    'flex text-lg items-center mt-12 relative'
+    'flex justify-between items-center mt-12 py-3 h-12 text-black'
   )
   return (
     <div className={`${heroSearchBarClasses} ${extraClasses ?? ''}`}>

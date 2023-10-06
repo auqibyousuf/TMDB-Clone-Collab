@@ -1,17 +1,17 @@
 import React from 'react'
-import { NavBarType } from './NavBarType'
+import { NavListType } from './NavListType'
 import LinkComponent from '../Link/Link'
 import classNames from 'classnames'
 import Heading from '../Heading/Heading'
 
-const NavBar = ({
+const NavList = ({
   menuLinks,
   listItemExtraClasses,
   listContainerExtraClasses,
   variant,
   extraClasses,
   title,
-}: NavBarType) => {
+}: NavListType) => {
   const listContainerClasses = classNames({
     'flex relative gap-4': variant == 'header',
     'flex flex-col': variant == 'footer',
@@ -52,4 +52,4 @@ const NavBar = ({
   )
 }
 
-export default NavBar
+export default NavList

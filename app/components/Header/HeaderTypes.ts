@@ -1,10 +1,10 @@
-import { IconType } from "react-icons";
-import { LogoType } from "../Logo/LogoTypes";
-import { NavBarType } from "../NavBar/NavBarType";
+import { IconType } from 'react-icons'
+import { LogoType } from '../Logo/LogoTypes'
+import { NavListType } from '../NavList/NavListType'
 
 export type HeaderType = {
-  logo: LogoType;
-  menu: NavBarType;
-  ActionIcon: IconType;
-  extraClasses?: string;
-};
+  logo: LogoType
+  menu: NavListType
+  ActionIcon: IconType
+  extraClasses?: string
+}
