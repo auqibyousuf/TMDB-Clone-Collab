@@ -12,5 +12,5 @@ export type MovieCardTypes = {
   onCardClick?: React.MouseEventHandler
   onMenuClick?: React.MouseEventHandler
   extraClasses?: string
-  menuPoplinks: MenuPopOverTypes
+  menuPopLinks: MenuPopOverTypes
 }

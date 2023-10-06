@@ -10,7 +10,7 @@ const MovieCard = ({
   cardImage,
   rating,
   title,
-  menuPoplinks,
+  menuPopLinks,
   date,
   onCardClick,
   onMenuClick,
@@ -21,35 +21,33 @@ const MovieCard = ({
   )
 
   return (
-    <div>
-      <a
-        href='#'
-        className={`${movieCardClasses} ${extraClasses ?? ''}`}
-        onClick={onCardClick}
-      >
-        <Image
-          width={150}
-          height={225}
-          alt={cardImage.imgAlt}
-          src={cardImage.imgSrc}
-          className='w-[150px] h-[225px] rounded rounded-8'
-        />
+    <a
+      href='#'
+      className={`${movieCardClasses} ${extraClasses ?? ''}`}
+      onClick={onCardClick}
+    >
+      <Image
+        width={150}
+        height={225}
+        alt={cardImage.imgAlt}
+        src={cardImage.imgSrc}
+        className='w-[150px] h-[225px] rounded rounded-8'
+      />
 
-        <MenuPopOver
-          links={menuPoplinks.links}
-          extraClasses='absolute right-4 top-4'
+      <MenuPopOver
+        links={menuPopLinks.links}
+        extraClasses='absolute right-4 top-4'
+      />
+      <div className='ml-3'>
+        <Rating
+          value={rating.value}
+          variant='movie'
+          extraClasses='absolute bottom-[26%]'
         />
-        <div className='ml-3'>
-          <Rating
-            value={rating.value}
-            variant='movie'
-            extraClasses='absolute bottom-[26%]'
-          />
-          <Text text={title} variant='16' extraClasses='font-bold' />
-          <Text text={date} variant='16' extraClasses='opacity-50' />
-        </div>
-      </a>
-    </div>
+        <Text text={title} variant='16' extraClasses='font-bold' />
+        <Text text={date} variant='16' extraClasses='opacity-50' />
+      </div>
+    </a>
   )
 }
 
