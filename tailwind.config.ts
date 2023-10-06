@@ -14,7 +14,6 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         linearGradient: 'linear-gradient(90deg, #1ED5A9 0%, #01B4E4 100%)',
-        buttonTab: 'linear-gradient(90deg, #C0FECF 0%, #1ED5A9 100%)',
       },
       colors: {
         darkBlue: '#032541',
