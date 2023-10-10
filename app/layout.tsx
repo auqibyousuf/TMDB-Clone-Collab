@@ -4,7 +4,7 @@ import { Poppins } from 'next/font/google'
 import Header from './components/Header/Header'
 import { ImSearch } from 'react-icons/im'
 import Footer from './components/Footer/Footer'
-import { NavListType } from './components/NavList/NavListType'
+import { footerMenus, navMenu } from './mockdata/index'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,67 +16,6 @@ export const metadata: Metadata = {
   description: 'TMDB Movies',
 }
 
-const navMenu = [
-  {
-    text: 'Movies',
-    url: '#',
-  },
-  {
-    text: 'Tv Shows',
-    url: '#',
-  },
-  {
-    text: 'People',
-    url: '/person',
-  },
-  {
-    text: 'More',
-    url: '#',
-  },
-]
-
-const footerMenus: Array<NavListType> = [
-  {
-    title: 'THE BASICS',
-    variant: 'footer',
-    menuLinks: [
-      { text: 'About TMDB', url: '/about' },
-      { text: 'Contact Us', url: '/contact' },
-      { text: 'Support Forums', url: '/supportforums' },
-      { text: 'API', url: '/api' },
-      { text: 'System Status', url: '/status' },
-    ],
-  },
-  {
-    title: 'GET INVOLVED',
-    menuLinks: [
-      { text: 'Contribution Bible', url: '/' },
-      { text: 'Add New Movie', url: '/' },
-      { text: 'Add New TV Show', url: '/' },
-    ],
-    variant: 'footer',
-  },
-  {
-    title: 'COMMUNITY',
-    menuLinks: [
-      { text: 'Guidelines', url: '/guidelines' },
-      { text: 'Discussions', url: '/discussions' },
-      { text: 'Leaderboard', url: '/leaderboard' },
-      { text: 'Twitter', url: '/twitter' },
-    ],
-    variant: 'footer',
-  },
-  {
-    title: 'LEGAL',
-    menuLinks: [
-      { text: 'Terms of Use', url: '/' },
-      { text: 'API Terms of Use', url: '/' },
-      { text: 'Privacy Policy', url: '/' },
-      { text: 'DMCA Takedown Request', url: '/' },
-    ],
-    variant: 'footer',
-  },
-]
 export default function RootLayout({
   children,
 }: {

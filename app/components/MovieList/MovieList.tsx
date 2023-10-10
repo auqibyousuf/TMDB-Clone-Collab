@@ -6,40 +6,41 @@ import Button from '../Button/Button'
 import classNames from 'classnames'
 import { useState } from 'react'
 
-const MovieList = ({
-  title,
-  buttonTabs,
-  movies,
-  extraClasses,
-}: MovieListTypes) => {
+const MovieList = ({ title, tabs, movies, extraClasses }: MovieListTypes) => {
   const moviesListClasses = classNames(
-    'mt-5 mb-10 flex gap-5 overflow-y-hidden pb-3'
+    'mt-5 mb-10 flex gap-5 overflow-y-hidden relative'
+  )
+  const buttonTabContainerClasses = classNames(
+    'inline-block border border-darkBlue  rounded-30'
   )
   const buttonTabClasses = classNames(
-    'inline-block border border-darkBlue rounded-[30px]'
+    'data-[button=true]:bg-darkBlue data-[button=true]:rounded-30 text-lightGreen data-[button=true]:text-white'
   )
+  const [activeTab, setActiveTab] = useState(0)
 
-  const buttonClick = (e: any) => {
-    alert(`clicked on ${e.target.value} button`)
-  }
   return (
-    <div className='pl-10'>
+    <div className='pl-10 '>
       <div className='flex gap-5 mt-8'>
         <Heading text={title} variant='24' />
-        <div className={buttonTabClasses}>
-          {buttonTabs.map((buttonTab, index) => {
-            return (
-              <Button
-                key={index}
-                text={buttonTab.text}
-                extraClasses=''
-                variant='tabs'
-                onClick={buttonClick}
-                value={buttonTab.text}
-              />
-            )
-          })}
-        </div>
+        {tabs && tabs.length > 0 && (
+          <div className={buttonTabContainerClasses}>
+            {tabs.map((tab, index) => {
+              return (
+                <Button
+                  key={index}
+                  text={tab.text}
+                  variant='tab'
+                  onClick={() => {
+                    setActiveTab(index)
+                  }}
+                  value={tab.text}
+                  dataButton={activeTab == index}
+                  extraClasses={buttonTabClasses}
+                />
+              )
+            })}
+          </div>
+        )}
       </div>
 
       <ul className={`${moviesListClasses} ${extraClasses ?? ''}`}>
@@ -50,7 +51,7 @@ const MovieList = ({
                 cardImage={movie.cardImage}
                 rating={movie.rating}
                 title={movie.title}
-                menuPopLinks={movie.menuPopLinks}
+                menuPopOverLinks={movie.menuPopOverLinks}
                 date={movie.date}
               />
             </li>

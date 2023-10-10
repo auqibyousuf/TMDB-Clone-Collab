@@ -3,7 +3,7 @@ import { MovieCardTypes } from '../MovieCard/MovieCardTypes'
 
 export type MovieListTypes = {
   movies: Array<MovieCardTypes>
-  buttonTabs: Array<ButtonType>
+  tabs?: Array<ButtonType>
   title: string
   extraClasses?: string
 }

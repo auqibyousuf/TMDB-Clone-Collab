@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import MovieList from './MovieList'
+import { buttonsList, moviesList } from '@/app/mockdata'
 
 const meta = {
   title: 'Components/MovieList',
@@ -15,124 +16,8 @@ type Story = StoryObj<typeof meta>
 
 export const MovieListComponent: Story = {
   args: {
-    movies: [
-      {
-        cardImage: {
-          imgSrc: 'https://loremflickr.com/150/225',
-          imgAlt: 'movie-card',
-        },
-        rating: {
-          value: 80,
-        },
-        title: 'SpiderMan Across the Spider-Verse',
-        date: 'May 31, 2023',
-        menuPopLinks: {
-          links: [
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-          ],
-        },
-      },
-      {
-        cardImage: {
-          imgSrc: 'https://loremflickr.com/150/225',
-          imgAlt: 'movie-card',
-        },
-        rating: {
-          value: 80,
-        },
-        title: 'SpiderMan Across the Spider-Verse',
-        date: 'May 31, 2023',
-        menuPopLinks: {
-          links: [
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-          ],
-        },
-      },
-      {
-        cardImage: {
-          imgSrc: 'https://loremflickr.com/150/225',
-          imgAlt: 'movie-card',
-        },
-        rating: {
-          value: 80,
-        },
-        title: 'SpiderMan Across the Spider-Verse',
-        date: 'May 31, 2023',
-        menuPopLinks: {
-          links: [
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-          ],
-        },
-      },
-      {
-        cardImage: {
-          imgSrc: 'https://loremflickr.com/150/225',
-          imgAlt: 'movie-card',
-        },
-        rating: {
-          value: 80,
-        },
-        title: 'SpiderMan Across the Spider-Verse',
-        date: 'May 31, 2023',
-        menuPopLinks: {
-          links: [
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-            {
-              text: '1',
-              url: '#',
-            },
-          ],
-        },
-      },
-    ],
-    buttonTabs: [
-      {
-        text: 'Today',
-      },
-      {
-        text: 'This Week',
-      },
-    ],
+    movies: moviesList,
+    tabs: buttonsList,
     title: 'Trending',
   },
 }
