@@ -1,16 +1,17 @@
 import { MenuPopOverTypes } from '../MenuPopOver/MenuPopOverTypes'
 import { RatingTypes } from '../Rating/RatingTypes'
 
+export type ImageType = {
+  imgSrc: string
+  imgAlt: string
+}
+
 export type MovieCardTypes = {
-  cardImage: {
-    imgSrc: string
-    imgAlt: string
-  }
+  cardImage: ImageType
   rating: RatingTypes
   title: string
   date: string
   onCardClick?: React.MouseEventHandler
-  onMenuClick?: React.MouseEventHandler
   extraClasses?: string
-  menuPoplinks: MenuPopOverTypes
+  menuPopOverLinks: MenuPopOverTypes
 }

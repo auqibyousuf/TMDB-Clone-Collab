@@ -17,13 +17,12 @@ const MenuPopOver = ({ links, extraClasses }: MenuPopOverTypes) => (
       </button>
     </Popover.Trigger>
     <Popover.Portal>
-      <Popover.Content className='rounded-8 mt-2 bg-gray-50 shadow-l px-6 py-2'>
+      <Popover.Content className='rounded-8 mt-2 bg-gray-50 shadow-l px-1 py-1'>
         <NavList
           menuLinks={links}
           variant='default'
           extraClasses='text-black block text-center'
-          listContainerExtraClasses='flex flex-col gap-3 text-black py-8 w-[70px] items-center'
-          listItemExtraClasses='w-full'
+          listContainerExtraClasses='flex flex-col gap-3 text-black py-2 w-[70px] items-center'
         />
       </Popover.Content>
     </Popover.Portal>
