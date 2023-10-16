@@ -3,7 +3,7 @@ import { MovieCardTypes } from '../MovieCard/MovieCardTypes'
 
 export type MovieListTypes = {
   movies: Array<MovieCardTypes>
-  tabs?: Array<ButtonType>
+  tabs?: Array<{ tabsName: ButtonType; onClick: React.MouseEventHandler }>
   title: string
   extraClasses?: string
 }
