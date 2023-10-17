@@ -2,97 +2,63 @@
 import useSWR from 'swr'
 import HeroSection from './components/HeroSection/HeroSection'
 import MovieList from './components/MovieList/MovieList'
-import { API, baseURL, fetcher, imgURL } from './api/api'
+import { APIKEY, baseURL, fetcher, baseImgURL } from './api/api'
 import { useState } from 'react'
 
 export default function Home() {
-  /* Trending Movies Section*/
   const [time, setTime] = useState<'day' | 'week'>('day')
 
   const {
     data: trendingMoviesData,
     error: trendingMoviesError,
     isLoading: trendingMoviesIsLoading,
-  } = useSWR(`${baseURL}/3/trending/movie/${time}?api_key=${API}`, fetcher)
+  } = useSWR(`${baseURL}/3/trending/movie/${time}?api_key=${APIKEY}`, fetcher)
 
   const {
     data: popularMoviesData,
     error: popularMoviesError,
     isLoading: popularMoviesIsLoading,
-  } = useSWR(`${baseURL}/3/movie/popular?api_key=${API}`, fetcher)
+  } = useSWR(`${baseURL}/3/movie/popular?api_key=${APIKEY}`, fetcher)
 
-  if (trendingMoviesError) return <div>failed to load</div>
-  if (trendingMoviesIsLoading) return <div>loading...</div>
+  if (trendingMoviesError || popularMoviesError)
+    return <div>failed to load</div>
+  if (trendingMoviesIsLoading || popularMoviesIsLoading)
+    return <div>loading...</div>
 
-  const trendingMovies = trendingMoviesData.results.map((results: any) => {
-    const { poster_path, release_date, title, vote_average } = results
-    return {
-      cardImage: {
-        imgSrc: `${imgURL}${poster_path}`,
-        imgAlt: 'not found',
-      },
-      rating: {
-        value: Math.floor(vote_average * 10),
-      },
-      title: title,
-      date: release_date,
-      menuPopOverLinks: {
-        links: [
-          {
-            text: '1',
-            url: '#',
-          },
-          {
-            text: '1',
-            url: '#',
-          },
-          {
-            text: '1',
-            url: '#',
-          },
-        ],
-      },
-    }
-  })
+  const getFormattedMovies = (movies: any) => {
+    return movies.map((movie: any) => {
+      return {
+        cardImage: {
+          imgSrc: `${baseImgURL}${movie.poster_path}`,
+          imgAlt: 'not found',
+        },
+        rating: {
+          value: Math.floor(movie.vote_average * 10),
+        },
+        title: movie.title,
+        date: movie.release_date,
+        menuPopOverLinks: {
+          links: [
+            {
+              text: '1',
+              url: '#',
+            },
+            {
+              text: '1',
+              url: '#',
+            },
+            {
+              text: '1',
+              url: '#',
+            },
+          ],
+        },
+      }
+    })
+  }
 
-  /* Polular Movies */
-
-  if (popularMoviesError) return <div>failed to load</div>
-  if (popularMoviesIsLoading) return <div>loading...</div>
-
-  console.log(popularMoviesData)
-  console.log(trendingMoviesData)
-
-  const popularMovies = popularMoviesData.results.map((results: any) => {
-    const { poster_path, release_date, title, vote_average } = results
-    return {
-      cardImage: {
-        imgSrc: `${imgURL}${poster_path}`,
-        imgAlt: 'not found',
-      },
-      rating: {
-        value: Math.floor(vote_average * 10),
-      },
-      title: title,
-      date: release_date,
-      menuPopOverLinks: {
-        links: [
-          {
-            text: '1',
-            url: '#',
-          },
-          {
-            text: '1',
-            url: '#',
-          },
-          {
-            text: '1',
-            url: '#',
-          },
-        ],
-      },
-    }
-  })
+  const trendingMovies = getFormattedMovies(trendingMoviesData.results)
+  const popularMovies = getFormattedMovies(popularMoviesData.results)
 
   const buttonsList = [
     {
@@ -108,8 +74,6 @@ export default function Home() {
       },
     },
   ]
-
-  /* Popular Movies Section*/
 
   return (
     <main>
@@ -127,7 +91,6 @@ export default function Home() {
           tabs={buttonsList}
           title='Trending'
         />
-
         <MovieList movies={popularMovies} title='Popular' />
       </div>
     </main>
