@@ -17,9 +17,13 @@ const NavList = ({
     'flex flex-col': variant == 'footer',
   })
   const listItemClasses = classNames({
-    'group flex relative': variant == 'header',
+    'group relative': variant == 'header',
     'gap-2': variant == 'footer',
   })
+
+  const subMenuClasses = classNames(
+    'hidden text-black text-base group-hover:block absolute rounded-8 top-7 transition bg-white w-40 -left-2 z-10'
+  )
   return (
     <div>
       {title && (
@@ -44,6 +48,21 @@ const NavList = ({
                 text={text}
                 extraClasses={extraClasses}
               />
+              {linkItem.subMenu && linkItem.subMenu.length > 0 && (
+                <ul className={subMenuClasses}>
+                  {linkItem.subMenu.map((subLinks, index) => {
+                    return (
+                      <li key={index}>
+                        <LinkComponent
+                          text={subLinks.text}
+                          url={subLinks.url}
+                          extraClasses='py-2 px-4 block hover:bg-slate-200 rounded-8'
+                        />
+                      </li>
+                    )
+                  })}
+                </ul>
+              )}
             </li>
           )
         })}

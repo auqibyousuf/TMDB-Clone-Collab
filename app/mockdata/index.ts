@@ -1,4 +1,5 @@
 import { ButtonType } from '../components/Button/ButtonTypes'
+import { LinkType } from '../components/Link/LinkTypes'
 import { MovieCardTypes } from '../components/MovieCard/MovieCardTypes'
 import { NavListType } from '../components/NavList/NavListType'
 
@@ -428,22 +429,54 @@ export const buttonsList: ButtonType[] = [
   },
 ]
 
-export const navMenu = [
+export const navMenu: LinkType[] = [
   {
     text: 'Movies',
-    url: '#',
+    url: 'nourl',
+    subMenu: [
+      {
+        text: 'Popular',
+        url: '/movie',
+      },
+      {
+        text: 'Now Playing',
+        url: '/movie/now-playing',
+      },
+      {
+        text: 'Up Coming',
+        url: '/movie/upcoming',
+      },
+      {
+        text: 'Top Rated',
+        url: '/movie/top-rated',
+      },
+    ],
   },
   {
     text: 'Tv Shows',
-    url: '#',
+    url: 'nourl',
+    subMenu: [
+      {
+        text: 'Popular',
+        url: '/tv',
+      },
+      {
+        text: 'Airing Today',
+        url: '/tv/airing-today',
+      },
+      {
+        text: 'On TV',
+        url: '/tv/on-the-air',
+      },
+      {
+        text: 'Top Rated',
+        url: '/tv/top-rated',
+      },
+    ],
   },
   {
     text: 'People',
     url: '/person',
-  },
-  {
-    text: 'More',
-    url: '#',
   },
 ]
 
