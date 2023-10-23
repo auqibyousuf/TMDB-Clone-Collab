@@ -41,7 +41,7 @@ const MovieCard = ({
         <Rating
           value={rating.value}
           variant='movie'
-          extraClasses='absolute bottom-[26%]'
+          extraClasses='absolute bottom-[30%]'
         />
         <Text text={title} variant='16' extraClasses='font-bold' />
         <Text text={date} variant='16' extraClasses='opacity-50' />

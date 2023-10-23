@@ -522,3 +522,20 @@ export const footerMenus: Array<NavListType> = [
     variant: 'footer',
   },
 ]
+
+export const MenuPopOverLinks = {
+  links: [
+    {
+      text: '1',
+      url: '#',
+    },
+    {
+      text: '1',
+      url: '#',
+    },
+    {
+      text: '1',
+      url: '#',
+    },
+  ],
+}

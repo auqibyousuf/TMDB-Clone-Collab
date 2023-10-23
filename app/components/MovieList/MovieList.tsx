@@ -28,12 +28,14 @@ const MovieList = ({ title, tabs, movies, extraClasses }: MovieListTypes) => {
               return (
                 <Button
                   key={index}
-                  text={tab.text}
+                  text={tab.tabsName.text}
                   variant='tab'
                   onClick={() => {
                     setActiveTab(index)
+                    //@ts-ignore
+                    tab.onClick()
                   }}
-                  value={tab.text}
+                  value={tab.tabsName.text}
                   dataButton={activeTab == index}
                   extraClasses={buttonTabClasses}
                 />
