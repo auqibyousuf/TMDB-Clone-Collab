@@ -23,7 +23,7 @@ const MovieCard = ({
 
   return (
     <a
-      href={`/${id}`}
+      href={`/movie/${id}`}
       className={`${movieCardClasses} ${extraClasses ?? ''}`}
       onClick={onCardClick}
     >

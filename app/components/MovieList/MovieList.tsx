@@ -50,6 +50,7 @@ const MovieList = ({ title, tabs, movies, extraClasses }: MovieListTypes) => {
           return (
             <li key={index} className='flex shrink-0 basis-40'>
               <MovieCard
+                id={movie.id}
                 cardImage={movie.cardImage}
                 rating={movie.rating}
                 title={movie.title}

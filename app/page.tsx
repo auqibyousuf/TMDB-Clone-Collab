@@ -28,6 +28,7 @@ export default function Home() {
   const getFormattedMovies = (movies: any) => {
     return movies.map((movie: any) => {
       return {
+        id: movie.id,
         cardImage: {
           imgSrc: `${baseImgURL}${movie.poster_path}`,
           imgAlt: 'not found',
