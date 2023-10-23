@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { moviesList, searchList } from '../mockdata'
+import { searchMoviesList, searchList } from '../mockdata'
 import SearchPage from '../components/SearchPage/SearchPage'
 
 const Page = () => {
@@ -13,7 +13,7 @@ const Page = () => {
           resultsCount: 20,
         }}
         searchedMoviesList={{
-          movies: moviesList,
+          movies: searchMoviesList,
         }}
       />
     </div>
