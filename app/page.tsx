@@ -76,7 +76,7 @@ export default function Home() {
   ]
 
   return (
-    <main>
+    <main className='bg-white'>
       <div className='w-[1440px] mx-auto'>
         <HeroSection
           title='Welcome.'

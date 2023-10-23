@@ -1,8 +1,6 @@
 'use client'
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import { HeroSectionType } from './HeroSectionTypes'
-import Input from '../Input/Input'
-import Button from '../Button/Button'
 import Heading from '../Heading/Heading'
 import Text from '../Text/Text'
 import HeroSearchBar from '../HeroSearchBar/HeroSearchBar'
@@ -41,6 +39,7 @@ const HeroSection = ({
           input={{
             placeholder: 'Search for a movie, tv show, person......',
             onChange: handleInputChange,
+            variant: 'text',
           }}
           search={{
             text: 'Search',

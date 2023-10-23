@@ -7,11 +7,13 @@ export type ImageType = {
 }
 
 export type MovieCardTypes = {
+  id?: string
   cardImage: ImageType
-  rating: RatingTypes
+  rating?: RatingTypes
   title: string
   date: string
   onCardClick?: React.MouseEventHandler
   extraClasses?: string
-  menuPopOverLinks: MenuPopOverTypes
+  menuPopOverLinks?: MenuPopOverTypes
+  description?: string
 }

@@ -5,6 +5,7 @@ import { NavListType } from '../NavList/NavListType'
 export type HeaderType = {
   logo: LogoType
   menu: NavListType
-  ActionIcon: IconType
+  submenu?: NavListType
+  ActionIcon?: IconType
   extraClasses?: string
 }

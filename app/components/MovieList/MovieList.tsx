@@ -21,7 +21,7 @@ const MovieList = ({ title, tabs, movies, extraClasses }: MovieListTypes) => {
   return (
     <div className='pl-10 '>
       <div className='flex gap-5 mt-8'>
-        <Heading text={title} variant='24' />
+        {title && <Heading text={title} variant='24' />}
         {tabs && tabs.length > 0 && (
           <div className={buttonTabContainerClasses}>
             {tabs.map((tab, index) => {

@@ -9,8 +9,10 @@ const NavList = ({
   listItemExtraClasses,
   listContainerExtraClasses,
   variant,
-  extraClasses,
+  navLinkExtraClasses,
   title,
+  count,
+  countClasses,
 }: NavListType) => {
   const listContainerClasses = classNames({
     'flex relative gap-4': variant == 'header',
@@ -46,7 +48,7 @@ const NavList = ({
               <LinkComponent
                 url={url}
                 text={text}
-                extraClasses={extraClasses}
+                extraClasses={navLinkExtraClasses}
               />
               {linkItem.subMenu && linkItem.subMenu.length > 0 && (
                 <ul className={subMenuClasses}>
@@ -63,6 +65,7 @@ const NavList = ({
                   })}
                 </ul>
               )}
+              {count && <span className={countClasses}>{count}</span>}
             </li>
           )
         })}
