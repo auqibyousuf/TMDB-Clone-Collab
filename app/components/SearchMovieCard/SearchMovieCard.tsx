@@ -6,7 +6,7 @@ import Text from '../Text/Text'
 
 const SearchMovieCard = ({ searchedMovieCard }: SearchMovieCardType) => {
   return (
-    <div className='flex items-start border rounded-8 shadow bg-white'>
+    <div className='flex items-start border rounded-8 shadow bg-white h-[141px]'>
       <div className='w-[94px] h-[141px] '>
         <Image
           src={searchedMovieCard.cardImage.imgSrc}

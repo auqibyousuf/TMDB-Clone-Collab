@@ -6,9 +6,39 @@ import { Logo } from '../Logo/Logo'
 import Input from '../Input/Input'
 import { ImSearch } from 'react-icons/im'
 import { useRouter } from 'next/navigation'
+import { baseURL, APIKEY, fetcher } from '@/app/api/api'
+import { time } from 'console'
+import useSWR from 'swr'
 
-const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
+const Header = ({
+  logo,
+  menu,
+  ActionIcon,
+  extraClasses,
+  searchMovie,
+}: HeaderType) => {
+  const router = useRouter()
   const [isActive, setIsActive] = useState<Boolean>(false)
+  const [searchItem, setSearchItem] = useState('')
+
+  const {
+    data: SearchData,
+    error: SearchDataError,
+    isLoading: SearchDataIsLoading,
+  } = useSWR(
+    `${baseURL}/3/search/collection?query=${searchItem}&api_key=${APIKEY}`,
+    fetcher
+  )
+  if (SearchDataError) return <div>failed to load</div>
+
+  const handleInputChange = (e: any) => {
+    setSearchItem(e.target.value)
+  }
+  const handleInputKeyPress = (e: any) => {
+    if (e.key == 'Enter') {
+      router.push(`/search?query=${searchItem}`)
+    }
+  }
   const navBarClasses = classNames(
     'flex gap-4 items-center max-w-[1440px] w-full px-10 h-full flex'
   )
@@ -16,7 +46,7 @@ const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
     'bg-darkBlue h-28 py-3 w-full justify-center flex items-center'
   )
   const iconClasses = classNames('text-lightBlue w-5 h-5 hover:pointer ml-auto')
-  const router = useRouter()
+
   return (
     <div>
       <header className={`${headerClasses} ${extraClasses ?? ''}`}>
@@ -51,11 +81,8 @@ const Header = ({ logo, menu, ActionIcon, extraClasses }: HeaderType) => {
             variant='search'
             placeholder='Search'
             icon={ImSearch}
-            onKeyPress={(e) => {
-              if (e.key == 'Enter') {
-                router.push('/search')
-              }
-            }}
+            onKeyPress={handleInputKeyPress}
+            onChange={handleInputChange}
           />
         </div>
       </a>

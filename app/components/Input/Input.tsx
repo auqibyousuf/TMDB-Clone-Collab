@@ -24,6 +24,7 @@ const Input = ({
   const iconClasses = classNames(
     'w-[14px] h-[14px] absolute fill-black left-10 z-20'
   )
+
   return (
     <div className='bg-white w-full border-b'>
       <div className='relative max-w-[1440px] w-full mx-auto flex items-center'>

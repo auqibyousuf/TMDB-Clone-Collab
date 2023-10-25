@@ -142,7 +142,7 @@ export const searchList = [
 export const searchMoviesList = [
   {
     cardImage: {
-      imgSrc: 'https://placehold.co/94x141',
+      imgSrc: 'https://loremflickr.com/94/141',
       imgAlt: 'card image',
     },
     title: 'Meg 2: The Trench',
@@ -152,7 +152,7 @@ export const searchMoviesList = [
   },
   {
     cardImage: {
-      imgSrc: 'https://placehold.co/94x141',
+      imgSrc: 'https://loremflickr.com/94/141',
       imgAlt: 'card image',
     },
     title: 'Meg 2: The Trench',
@@ -162,7 +162,7 @@ export const searchMoviesList = [
   },
   {
     cardImage: {
-      imgSrc: 'https://placehold.co/94x141',
+      imgSrc: 'https://loremflickr.com/94/141',
       imgAlt: 'card image',
     },
     title: 'Meg 2: The Trench',
@@ -172,7 +172,7 @@ export const searchMoviesList = [
   },
   {
     cardImage: {
-      imgSrc: 'https://placehold.co/94x141',
+      imgSrc: 'https://loremflickr.com/94/141',
       imgAlt: 'card image',
     },
     title: 'Meg 2: The Trench',
@@ -183,7 +183,7 @@ export const searchMoviesList = [
 
   {
     cardImage: {
-      imgSrc: 'https://placehold.co/94x141',
+      imgSrc: 'https://loremflickr.com/94/141',
       imgAlt: 'card image',
     },
     title: 'Meg 2: The Trench',

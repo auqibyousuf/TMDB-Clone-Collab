@@ -8,4 +8,5 @@ export type HeaderType = {
   submenu?: NavListType
   ActionIcon?: IconType
   extraClasses?: string
+  searchMovie?: string
 }

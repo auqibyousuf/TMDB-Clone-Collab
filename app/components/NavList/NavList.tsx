@@ -11,8 +11,6 @@ const NavList = ({
   variant,
   navLinkExtraClasses,
   title,
-  count,
-  countClasses,
 }: NavListType) => {
   const listContainerClasses = classNames({
     'flex relative gap-4': variant == 'header',
@@ -65,7 +63,6 @@ const NavList = ({
                   })}
                 </ul>
               )}
-              {count && <span className={countClasses}>{count}</span>}
             </li>
           )
         })}

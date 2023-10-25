@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const SearchMovieList = ({ searchList }: SearchMovieListType) => {
   return (
-    <ul className='flex flex-col gap-5'>
+    <ul className='flex flex-col gap-5 max-w-[1020px]'>
       {searchList.map((searchMovie, index) => {
         return (
           <li key={index}>

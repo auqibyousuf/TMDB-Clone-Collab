@@ -7,6 +7,4 @@ export type NavListType = {
   variant?: 'header' | 'footer' | 'default'
   navLinkExtraClasses?: string
   title?: string
-  count?: number
-  countClasses?: string
 }
