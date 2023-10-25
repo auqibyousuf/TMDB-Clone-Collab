@@ -9,7 +9,7 @@ const NavList = ({
   listItemExtraClasses,
   listContainerExtraClasses,
   variant,
-  extraClasses,
+  navLinkExtraClasses,
   title,
 }: NavListType) => {
   const listContainerClasses = classNames({
@@ -46,7 +46,7 @@ const NavList = ({
               <LinkComponent
                 url={url}
                 text={text}
-                extraClasses={extraClasses}
+                extraClasses={navLinkExtraClasses}
               />
               {linkItem.subMenu && linkItem.subMenu.length > 0 && (
                 <ul className={subMenuClasses}>

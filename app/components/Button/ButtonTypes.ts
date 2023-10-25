@@ -1,5 +1,5 @@
 export type ButtonType = {
-  text: string
+  text?: string
   variant?: 'hero-section' | 'tab'
   extraClasses?: string
   onClick?: React.MouseEventHandler

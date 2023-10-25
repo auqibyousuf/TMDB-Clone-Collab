@@ -5,6 +5,6 @@ export type NavListType = {
   listItemExtraClasses?: string
   listContainerExtraClasses?: string
   variant?: 'header' | 'footer' | 'default'
-  extraClasses?: string
+  navLinkExtraClasses?: string
   title?: string
 }

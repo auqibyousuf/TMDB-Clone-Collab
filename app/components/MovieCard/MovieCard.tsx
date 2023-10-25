@@ -12,8 +12,10 @@ const MovieCard = ({
   title,
   menuPopOverLinks,
   date,
+  id,
   onCardClick,
   extraClasses,
+  description,
 }: MovieCardTypes) => {
   const movieCardClasses = classNames(
     'relative flex flex-col max-w-[150px] gap-6'
@@ -21,7 +23,7 @@ const MovieCard = ({
 
   return (
     <a
-      href='#'
+      href={`/movie/${id}`}
       className={`${movieCardClasses} ${extraClasses ?? ''}`}
       onClick={onCardClick}
     >
@@ -32,17 +34,22 @@ const MovieCard = ({
         src={cardImage.imgSrc}
         className='w-[150px] h-[225px] rounded rounded-8'
       />
-
-      <MenuPopOver
-        links={menuPopOverLinks.links}
-        extraClasses='absolute right-[10px] top-[10px] z-20'
-      />
-      <div className='ml-3'>
-        <Rating
-          value={rating.value}
-          variant='movie'
-          extraClasses='absolute bottom-[30%]'
+      {menuPopOverLinks && (
+        <MenuPopOver
+          links={menuPopOverLinks?.links}
+          extraClasses='absolute right-[10px] top-[10px] z-20'
         />
+      )}
+
+      <div className='ml-3'>
+        {rating && (
+          <Rating
+            value={rating.value}
+            variant='movie'
+            extraClasses='absolute bottom-[26%]'
+          />
+        )}
+
         <Text text={title} variant='16' extraClasses='font-bold' />
         <Text text={date} variant='16' extraClasses='opacity-50' />
       </div>

@@ -19,7 +19,7 @@ const Footer = ({ logo, menus }: FooterType) => {
             menuLinks={menu.menuLinks}
             variant='footer'
             title={menu.title}
-            extraClasses='font-normal text-white'
+            navLinkExtraClasses='font-normal text-white'
           />
         )
       })}
