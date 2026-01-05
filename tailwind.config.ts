@@ -20,6 +20,7 @@ const config: Config = {
         lightBrown: '#897474',
         grey: '#D7D7D7',
         lightGrey: '#E4E4E4',
+        semiGrey: '#E3E3E3',
       },
     },
     borderRadius: {

@@ -3,423 +3,6 @@ import { LinkType } from '../components/Link/LinkTypes'
 import { MovieCardTypes } from '../components/MovieCard/MovieCardTypes'
 import { NavListType } from '../components/NavList/NavListType'
 
-export const moviesList: MovieCardTypes[] = [
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'SpiderMan Across the Spider-Verse',
-    date: 'May 31, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '1',
-          url: '#',
-        },
-        {
-          text: '1',
-          url: '#',
-        },
-        {
-          text: '1',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-
-  {
-    cardImage: {
-      imgSrc: 'https://loremflickr.com/150/225',
-      imgAlt: 'movie-card',
-    },
-    rating: {
-      value: 80,
-    },
-    title: 'No Hard Feelings',
-    date: 'Jun 15, 2023',
-    menuPopOverLinks: {
-      links: [
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-        {
-          text: '2',
-          url: '#',
-        },
-      ],
-    },
-  },
-]
-
 export const buttonsList: ButtonType[] = [
   {
     text: 'Today',
@@ -428,8 +11,7 @@ export const buttonsList: ButtonType[] = [
     text: 'This Week',
   },
 ]
-
-export const navMenu: LinkType[] = [
+export const navMenu = [
   {
     text: 'Movies',
     url: 'nourl',
@@ -479,7 +61,6 @@ export const navMenu: LinkType[] = [
     url: '/person',
   },
 ]
-
 export const footerMenus: Array<NavListType> = [
   {
     title: 'THE BASICS',
@@ -539,3 +120,75 @@ export const MenuPopOverLinks = {
     },
   ],
 }
+export const searchList = [
+  {
+    text: 'Movies',
+    url: '#',
+  },
+  {
+    text: 'People',
+    url: '#',
+  },
+  {
+    text: 'TV Shows',
+    url: '/person',
+  },
+  {
+    text: 'Collections',
+    url: '#',
+  },
+]
+
+export const searchMoviesList = [
+  {
+    cardImage: {
+      imgSrc: 'https://loremflickr.com/94/141',
+      imgAlt: 'card image',
+    },
+    title: 'Meg 2: The Trench',
+    date: 'August 4, 2023',
+    description:
+      'An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.',
+  },
+  {
+    cardImage: {
+      imgSrc: 'https://loremflickr.com/94/141',
+      imgAlt: 'card image',
+    },
+    title: 'Meg 2: The Trench',
+    date: 'August 4, 2023',
+    description:
+      'An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.',
+  },
+  {
+    cardImage: {
+      imgSrc: 'https://loremflickr.com/94/141',
+      imgAlt: 'card image',
+    },
+    title: 'Meg 2: The Trench',
+    date: 'August 4, 2023',
+    description:
+      'An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.',
+  },
+  {
+    cardImage: {
+      imgSrc: 'https://loremflickr.com/94/141',
+      imgAlt: 'card image',
+    },
+    title: 'Meg 2: The Trench',
+    date: 'August 4, 2023',
+    description:
+      'An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.',
+  },
+
+  {
+    cardImage: {
+      imgSrc: 'https://loremflickr.com/94/141',
+      imgAlt: 'card image',
+    },
+    title: 'Meg 2: The Trench',
+    date: 'August 4, 2023',
+    description:
+      'An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.',
+  },
+]

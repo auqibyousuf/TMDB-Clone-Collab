@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import MovieList from './MovieList'
-import { buttonsList, moviesList } from '@/app/mockdata'
+// import { buttonsList, moviesList } from '@/app/mockdata'
 
 const meta = {
   title: 'Components/MovieList',
@@ -16,8 +16,8 @@ type Story = StoryObj<typeof meta>
 
 export const MovieListComponent: Story = {
   args: {
-    movies: moviesList,
-    tabs: buttonsList,
+    movies: [],
+    tabs: [],
     title: 'Trending',
   },
 }

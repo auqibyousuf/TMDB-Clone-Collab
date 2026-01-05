@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Input from './Input'
+import { ImSearch } from 'react-icons/im'
 
 const meta = {
   title: 'Components/Input',
@@ -18,5 +19,14 @@ export const InputVariant: Story = {
     variant: 'text',
     placeholder: 'Input',
     defaultValue: 'input-value',
+  },
+}
+
+export const InputVariantWithIconLeft: Story = {
+  args: {
+    variant: 'search',
+    placeholder: 'Input',
+    defaultValue: 'input-value',
+    icon: ImSearch,
   },
 }
